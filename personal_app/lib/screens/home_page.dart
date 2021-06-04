@@ -15,6 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           widget.title,
           style: TextStyle(
@@ -25,13 +26,12 @@ class _MyHomePageState extends State<MyHomePage> {
             fontWeight: FontWeight.normal,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: (){},
-            icon: Icon(Icons.menu),
-            color: Colors.white,
-          ),
-        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[],
+        ),
       ),
       body: Center(
         child: Column(
