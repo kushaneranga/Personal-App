@@ -10,19 +10,28 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            decoration: TextDecoration.none,
+            color: Colors.white,
+            fontStyle: FontStyle.normal,
+            letterSpacing: 1.0,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.menu),
+            color: Colors.white,
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -31,17 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
