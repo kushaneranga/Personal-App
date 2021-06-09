@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.length}) : super(key: key);
 
-  final String title;
+  final int length;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -16,33 +16,35 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          widget.title,
-          style: TextStyle(
-            decoration: TextDecoration.none,
-            color: Colors.white,
-            fontStyle: FontStyle.normal,
-            letterSpacing: 1.0,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[],
-        ),
-      ),
-      body: Center(
-        child: Column(
+        title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Text(
-              'You have pushed the button this many times:',
+              'Kushan Eranga',
+              style: TextStyle(
+                fontSize: 22.0,
+                decoration: TextDecoration.none,
+                color: Colors.white,
+                fontStyle: FontStyle.normal,
+                letterSpacing: 0.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 16.0,
+                decoration: TextDecoration.none,
+                color: Colors.white,
+                fontStyle: FontStyle.normal,
+                letterSpacing: 1.0,
+                fontWeight: FontWeight.normal,
+              ),
             ),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

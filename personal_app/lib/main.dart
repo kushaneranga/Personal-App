@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Kushan Eranga'),
+      home: MyHomePage(
+        length: 3,
+      ),
     );
   }
 }

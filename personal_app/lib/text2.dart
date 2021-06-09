@@ -124,6 +124,8 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
   }
 }
 
+// Menu ----------------------With animation---------------------------------
+
 class Menu extends StatefulWidget {
   @override
   _MenuState createState() => _MenuState();
@@ -131,7 +133,7 @@ class Menu extends StatefulWidget {
 
 class _MenuState extends State<Menu> with SingleTickerProviderStateMixin {
   static const _menuTitles = [
-    'Declarative style',
+    'Declarative style k',
     'Premade widgets',
     'Stateful hot reload',
     'Native performance',
@@ -289,6 +291,7 @@ class _MenuState extends State<Menu> with SingleTickerProviderStateMixin {
               ),
             );
           },
+          // Button ---------------------------------------------
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               shape: const StadiumBorder(),
