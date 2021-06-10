@@ -110,9 +110,30 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: [
-            Icon(Icons.account_circle),
-            Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            Container(
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Icon(Icons.book_outlined),
+                ],
+              ),
+            ),
+            Container(
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Icon(Icons.account_circle),
+                ],
+              ),
+            ),
+            Container(
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Icon(Icons.details),
+                ],
+              ),
+            ),
           ],
         ),
       ),
