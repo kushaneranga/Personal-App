@@ -63,9 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
             labelColor: Colors.orange[600],
             unselectedLabelColor: Colors.white,
             tabs: [
+              Tab(icon: Icon(Icons.book_outlined),),
               Tab(icon: Icon(Icons.account_circle),),
-              Tab(icon: Icon(Icons.directions_transit),),
-              Tab(icon: Icon(Icons.directions_bike),),
+              Tab(icon: Icon(Icons.details),),
             ],
           ),
         ),
