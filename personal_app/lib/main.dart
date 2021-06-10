@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(
-        length: 3,
+      title: 'Kushan Eranga'
       ),
     );
   }
