@@ -46,12 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-          // leading: new Padding(
-          //   padding: const EdgeInsets.all(2.0),
-          //   child: new CircleAvatar(
-          //     backgroundImage: AssetImage('assets/backgroundimg.jpg'),
-          //   ),
-          // ),
+          leading: new Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: new CircleAvatar(
+              backgroundImage: AssetImage('assets/backgroundimg.jpg'),
+            ),
+          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.menu),
