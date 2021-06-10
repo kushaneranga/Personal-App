@@ -68,6 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Tab(icon: Icon(Icons.details),),
             ],
           ),
+          shadowColor: Colors.blue[400],
+          elevation: 10.0,
         ),
         body: TabBarView(
           children: [
