@@ -6,6 +6,22 @@ void main() {
   runApp(MyApp());
 }
 
+// To Use HexColor
+
+// extension ColorExtension on String {
+//   toColor() {
+//     var hexColor = this.replaceAll("#", "");
+//     if (hexColor.length == 6) {
+//       hexColor = "FF" + hexColor;
+//     }
+//     if (hexColor.length == 8) {
+//       return Color(int.parse("0x$hexColor"));
+//     }
+//   }
+// }
+
+// HexColor End
+
 class MyApp extends StatelessWidget {
 
   @override
@@ -15,6 +31,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // primaryColor: '#22a39f'.toColor(),
       ),
       home: MyHomePage(
       title: 'Kushan Eranga'
