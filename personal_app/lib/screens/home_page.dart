@@ -46,6 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
+          // leading: new Padding(
+          //   padding: const EdgeInsets.all(2.0),
+          //   child: new CircleAvatar(
+          //     backgroundImage: AssetImage('assets/backgroundimg.jpg'),
+          //   ),
+          // ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.menu),
@@ -56,17 +62,29 @@ class _MyHomePageState extends State<MyHomePage> {
             'assets/backgroundimg.jpg',
             fit: BoxFit.cover,
           ),
-          bottom: TabBar(
-            indicatorColor: Colors.orange[600],
-            indicatorWeight: 2.0,
-            isScrollable: false,
-            labelColor: Colors.orange[600],
-            unselectedLabelColor: Colors.white,
-            tabs: [
-              Tab(icon: Icon(Icons.book_outlined),),
-              Tab(icon: Icon(Icons.account_circle),),
-              Tab(icon: Icon(Icons.details),),
-            ],
+          bottom: PreferredSize(
+            preferredSize: Size(75.0, 75.0),
+            child: TabBar(
+              indicatorColor: Colors.orange[600],
+              indicatorWeight: 2.0,
+              isScrollable: false,
+              labelColor: Colors.orange[600],
+              unselectedLabelColor: Colors.white,
+              tabs: [
+                Container(
+                  height: 75.0,
+                  child: Tab(icon: Icon(Icons.book_outlined),),
+                ),
+                Container(
+                  height: 75.0,
+                  child: Tab(icon: Icon(Icons.account_circle),),
+                ),
+                Container(
+                  height: 75.0,
+                  child: Tab(icon: Icon(Icons.details),),
+                ),
+              ],
+            ),
           ),
           shadowColor: Colors.blue[400],
           elevation: 10.0,
