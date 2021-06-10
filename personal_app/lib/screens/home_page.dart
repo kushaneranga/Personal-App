@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -16,78 +17,96 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                widget.title,
-                style: TextStyle(
-                  fontSize: 22.0,
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                  fontStyle: FontStyle.normal,
-                  letterSpacing: 0.0,
-                  fontWeight: FontWeight.bold,
-                ),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(125.0),
+          child: AppBar(
+            centerTitle: true,
+            title: Container(
+              margin: EdgeInsets.only(top: 10.0,),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    child: Text(
+                      widget.title,
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontStyle: FontStyle.normal,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 2.0,),
+                    child: Text(
+                      'Profile',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontStyle: FontStyle.normal,
+                        letterSpacing: 1.0,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                'Profile',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                  fontStyle: FontStyle.normal,
-                  letterSpacing: 1.0,
-                  fontWeight: FontWeight.normal,
-                ),
+            ),
+            leading: Container(
+              margin: EdgeInsets.only(top: 5.0, left: 10.0),
+              padding: const EdgeInsets.all(1.0),
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/my_avatar.jpg'),
+              ),
+            ),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: (){},
               ),
             ],
-          ),
-          leading: new Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: new CircleAvatar(
-              backgroundImage: AssetImage('assets/backgroundimg.jpg'),
+            flexibleSpace: Image.asset(
+              'assets/backgroundimg.jpg',
+              fit: BoxFit.cover,
             ),
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: (){},
+            bottom: PreferredSize(
+              preferredSize: Size(52.0, 52.0),
+              child: TabBar(
+                indicatorColor: Colors.orange[600],
+                indicatorWeight: 2.0,
+                isScrollable: false,
+                labelColor: Colors.orange[600],
+                unselectedLabelColor: Colors.white,
+                tabs: [
+                  Container(
+                    height: 52.0,
+                    child: Tab(
+                      icon: Icon(Icons.book_outlined),
+                      text: 'About me',
+                    ),
+                  ),
+                  Container(
+                    height: 52.0,
+                    child: Tab(icon: Icon(Icons.account_circle),),
+                  ),
+                  Container(
+                    height: 52.0,
+                    child: Tab(
+                      icon: Icon(Icons.details),
+                      text: 'Details',
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ],
-          flexibleSpace: Image.asset(
-            'assets/backgroundimg.jpg',
-            fit: BoxFit.cover,
+            shadowColor: Colors.blue[400],
+            elevation: 10.0,
           ),
-          bottom: PreferredSize(
-            preferredSize: Size(75.0, 75.0),
-            child: TabBar(
-              indicatorColor: Colors.orange[600],
-              indicatorWeight: 2.0,
-              isScrollable: false,
-              labelColor: Colors.orange[600],
-              unselectedLabelColor: Colors.white,
-              tabs: [
-                Container(
-                  height: 75.0,
-                  child: Tab(icon: Icon(Icons.book_outlined),),
-                ),
-                Container(
-                  height: 75.0,
-                  child: Tab(icon: Icon(Icons.account_circle),),
-                ),
-                Container(
-                  height: 75.0,
-                  child: Tab(icon: Icon(Icons.details),),
-                ),
-              ],
-            ),
-          ),
-          shadowColor: Colors.blue[400],
-          elevation: 10.0,
         ),
         body: TabBarView(
           children: [
