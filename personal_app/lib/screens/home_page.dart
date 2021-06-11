@@ -11,7 +11,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -22,7 +21,9 @@ class _MyHomePageState extends State<MyHomePage> {
           child: AppBar(
             centerTitle: true,
             title: Container(
-              margin: EdgeInsets.only(top: 10.0,),
+              margin: EdgeInsets.only(
+                top: 10.0,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,7 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 2.0,),
+                    margin: EdgeInsets.only(
+                      top: 2.0,
+                    ),
                     child: Text(
                       'Profile',
                       style: TextStyle(
@@ -67,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.menu),
-                onPressed: (){},
+                onPressed: () {},
               ),
             ],
             flexibleSpace: Image.asset(
@@ -92,7 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     height: 52.0,
-                    child: Tab(icon: Icon(Icons.account_circle),),
+                    child: Tab(
+                      icon: Icon(Icons.account_circle),
+                    ),
                   ),
                   Container(
                     height: 52.0,
@@ -111,10 +116,20 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: [
             Container(
+              alignment: Alignment.center,
               child: ListView(
+                shrinkWrap: true,
                 scrollDirection: Axis.vertical,
+                padding: const EdgeInsets.all(30.0),
                 children: <Widget>[
-                  Icon(Icons.book_outlined),
+                  Text(
+                    '''I am an undergraduate of Moratuwa University of Sri Lanka & following BBSc Business Science in department of Industrial Management, Faculty of Business. Studied A/L in commerce stream.''',
+                    maxLines: 20,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 16.0,
+                    ),
+                  ),
                 ],
               ),
             ),
