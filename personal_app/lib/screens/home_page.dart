@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                            blurRadius: 40,
+                            blurRadius: 30,
                             color: Colors.grey,
                             offset: Offset(1,3),
                           ),
