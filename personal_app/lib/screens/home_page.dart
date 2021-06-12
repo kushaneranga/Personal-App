@@ -89,8 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     height: 52.0,
                     child: Tab(
-                      icon: Icon(Icons.book_outlined),
-                      text: 'About me',
+                      icon: Icon(Icons.account_circle),
                     ),
                   ),
                   Container(
@@ -103,7 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 52.0,
                     child: Tab(
                       icon: Icon(Icons.details),
-                      text: 'Details',
                     ),
                   ),
                 ],
@@ -116,18 +114,73 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: [
             Container(
-              alignment: Alignment.center,
               child: ListView(
-                shrinkWrap: true,
+                shrinkWrap: false,
                 scrollDirection: Axis.vertical,
                 padding: const EdgeInsets.all(30.0),
                 children: <Widget>[
-                  Text(
-                    '''I am an undergraduate of Moratuwa University of Sri Lanka & following BBSc Business Science in department of Industrial Management, Faculty of Business. Studied A/L in commerce stream.''',
-                    maxLines: 20,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16.0,
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 2.0),
+                    child: Text(
+                      "About me",
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 2.0,
+                        color: Colors.cyanAccent[700],
+                      ),
+                    ),
+                  ),
+                  const Divider(
+                    color: Colors.grey,
+                    thickness: 0.0,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(top: 10.0, bottom: 30.0),
+                    child: Text(
+                      "I'm Currently learning new technologies.",
+                      maxLines: 3,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 20.0,),
+                    child: Container(
+                      width: 260,
+                      height: 260,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage('assets/my_avatar.jpg'),
+                            fit: BoxFit.fill,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 40,
+                            color: Colors.grey,
+                            offset: Offset(1,3),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: Text(
+                      "I am an undergraduate of Moratuwa University of Sri Lanka & following BBSc Business Science in department of Industrial Management, Faculty of Business. Studied A/L in commerce stream.",
+                      maxLines: 20,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey[600],
+                      ),
                     ),
                   ),
                 ],
