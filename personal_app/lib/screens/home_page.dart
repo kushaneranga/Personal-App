@@ -95,13 +95,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     height: 52.0,
                     child: Tab(
-                      icon: Icon(Icons.account_circle),
+                      icon: Icon(Icons.assignment),
                     ),
                   ),
                   Container(
                     height: 52.0,
                     child: Tab(
-                      icon: Icon(Icons.details),
+                      icon: Icon(Icons.perm_contact_cal),
                     ),
                   ),
                 ],
