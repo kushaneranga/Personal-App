@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -295,7 +296,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     thickness: 0.0,
                   ),
                   ListTile(
-                    leading: Icon(Icons.location_on),
+                    leading: Icon(FontAwesomeIcons.github),
                     title: Text("GitHub | kushaneranga "),
                     // On Tab link
                     onTap: () async {
