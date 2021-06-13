@@ -155,8 +155,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Container(
                     padding: EdgeInsets.only(top: 10.0, bottom: 20.0,),
                     child: Container(
-                      width: 260,
-                      height: 260,
+                      width: 240,
+                      height: 240,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
