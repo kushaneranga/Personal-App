@@ -193,6 +193,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 shrinkWrap: false,
                 padding: const EdgeInsets.only(top: 30.0,),
                 children: <Widget>[
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 2.0),
+                    child: Text(
+                      "Details",
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 2.0,
+                        color: Colors.cyanAccent[700],
+                      ),
+                    ),
+                  ),
+                  const Divider(
+                    color: Colors.grey,
+                    thickness: 0.0,
+                  ),
                   ListTile(
                     leading: Icon(Icons.accessibility),
                     title: Text("Name with initials:"),
@@ -255,8 +273,41 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               child: ListView(
                 scrollDirection: Axis.vertical,
+                shrinkWrap: false,
+                padding: const EdgeInsets.only(top: 30.0,),
                 children: <Widget>[
-                  Icon(Icons.details),
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 2.0),
+                    child: Text(
+                      "Contact",
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 2.0,
+                        color: Colors.cyanAccent[700],
+                      ),
+                    ),
+                  ),
+                  const Divider(
+                    color: Colors.grey,
+                    thickness: 0.0,
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.location_on),
+                    title: Text("GitHub | kushaneranga "),
+                    // On Tab link
+                    onTap: () async {
+                      const url = 'https://github.com/kushaneranga';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    // On Tab link End
+                  ),
                 ],
               ),
             ),
