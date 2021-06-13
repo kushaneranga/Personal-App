@@ -272,6 +272,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
+              color: Colors.black87,
               child: ListView(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: false,
@@ -287,20 +288,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 26.0,
                         fontWeight: FontWeight.w500,
                         letterSpacing: 2.0,
-                        color: Colors.cyanAccent[700],
+                        color: Colors.white,
                       ),
                     ),
                   ),
                   const Divider(
-                    color: Colors.grey,
+                    color: Colors.white54,
                     thickness: 0.0,
                   ),
                   ListTile(
-                    leading: Icon(FontAwesomeIcons.github),
-                    title: Text("GitHub | kushaneranga "),
+                    leading: Icon(Icons.mail),
+                    title: Text(
+                      "kushan.maheepala@gmail.com",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                    trailing: Icon(Icons.more_horiz),
                     // On Tab link
                     onTap: () async {
-                      const url = 'https://github.com/kushaneranga';
+                      const url = 'mailto:kushan.maheepala@gmail.com?subject=Personal App';
                       if (await canLaunch(url)) {
                         await launch(url);
                       } else {
@@ -309,6 +316,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     // On Tab link End
                   ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(FontAwesomeIcons.github),
+                    title: Text(
+                      "GitHub | kushaneranga",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                    trailing: Icon(Icons.more_horiz),
+                    // On Tab link
+                    onTap: () async {
+                      const url = 'https://github.com/kushaneranga';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceWebView: true);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(),
                 ],
               ),
             ),
