@@ -297,14 +297,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     thickness: 0.0,
                   ),
                   ListTile(
-                    leading: Icon(Icons.mail),
+                    leading: Icon(
+                      Icons.mail,
+                      color: Colors.white70,
+                    ),
                     title: Text(
                       "kushan.maheepala@gmail.com",
                       style: TextStyle(
                         letterSpacing: 2.0,
+                        color: Colors.white70,
                       ),
                     ),
-                    trailing: Icon(Icons.more_horiz),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
                     // On Tab link
                     onTap: () async {
                       const url = 'mailto:kushan.maheepala@gmail.com?subject=Personal App';
@@ -316,16 +323,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     // On Tab link End
                   ),
-                  Divider(),
+                  Divider(color: Colors.white70,),
                   ListTile(
-                    leading: Icon(Icons.phone),
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.white70,
+                    ),
                     title: Text(
                       "+94-76-111-2345",
                       style: TextStyle(
                         letterSpacing: 2.0,
+                        color: Colors.white70,
                       ),
                     ),
-                    trailing: Icon(Icons.more_horiz),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
                     // On Tab link
                     onTap: () async {
                       String telephoneUrl = "tel:+94761112345";
@@ -337,16 +351,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     // On Tab link End
                   ),
-                  Divider(),
+                  Divider(color: Colors.white70,),
                   ListTile(
-                    leading: Icon(FontAwesomeIcons.github),
+                    leading: Icon(
+                      FontAwesomeIcons.github,
+                      color: Colors.white70,
+                    ),
                     title: Text(
                       "GitHub | kushaneranga",
                       style: TextStyle(
                         letterSpacing: 2.0,
+                        color: Colors.white70,
                       ),
                     ),
-                    trailing: Icon(Icons.more_horiz),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
                     // On Tab link
                     onTap: () async {
                       const url = 'https://github.com/kushaneranga';
@@ -358,7 +379,63 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     // On Tab link End
                   ),
-                  Divider(),
+                  Divider(color: Colors.white70,),
+                  ListTile(
+                    leading: Icon(
+                      FontAwesomeIcons.linkedin,
+                      color: Colors.white70,
+                    ),
+                    title: Text(
+                      "Linkedln | Kushan Eranga",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
+                    // On Tab link
+                    onTap: () async {
+                      const url = 'https://www.linkedin.com/in/kushan-eranga-9a813717b';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceWebView: true);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(color: Colors.white70,),
+                  ListTile(
+                    leading: Icon(
+                      FontAwesomeIcons.twitter,
+                      color: Colors.white70,
+                    ),
+                    title: Text(
+                      "Follow @KEranaga ",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
+                    // On Tab link
+                    onTap: () async {
+                      const url = 'https://twitter.com/Kushan98';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceWebView: true);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(color: Colors.white70,),
                 ],
               ),
             ),
