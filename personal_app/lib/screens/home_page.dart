@@ -414,7 +414,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.white70,
                     ),
                     title: Text(
-                      "Follow @KEranaga ",
+                      "Follow @KEranaga",
                       style: TextStyle(
                         letterSpacing: 2.0,
                         color: Colors.white70,
@@ -427,6 +427,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     // On Tab link
                     onTap: () async {
                       const url = 'https://twitter.com/Kushan98';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceWebView: true);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(color: Colors.white70,),
+                  ListTile(
+                    leading: Icon(
+                      FontAwesomeIcons.facebook,
+                      color: Colors.white70,
+                    ),
+                    title: Text(
+                      "Facebook | Kushan Eranga",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
+                    // On Tab link
+                    onTap: () async {
+                      const url = 'https://www.facebook.com/';
                       if (await canLaunch(url)) {
                         await launch(url, forceWebView: true);
                       } else {
