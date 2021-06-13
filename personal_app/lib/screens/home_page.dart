@@ -179,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       maxLines: 20,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.normal,
                         color: Colors.grey[600],
                       ),
