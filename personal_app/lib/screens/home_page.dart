@@ -318,6 +318,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Divider(),
                   ListTile(
+                    leading: Icon(Icons.phone),
+                    title: Text(
+                      "+94-76-111-2345",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                    trailing: Icon(Icons.more_horiz),
+                    // On Tab link
+                    onTap: () async {
+                      String telephoneUrl = "tel:+94761112345";
+                      if (await canLaunch(telephoneUrl)) {
+                        await launch(telephoneUrl);
+                      } else {
+                        throw "Can't phone that number.";
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(),
+                  ListTile(
                     leading: Icon(FontAwesomeIcons.github),
                     title: Text(
                       "GitHub | kushaneranga",
