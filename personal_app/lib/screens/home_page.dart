@@ -464,6 +464,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     // On Tab link End
                   ),
                   Divider(color: Colors.white70,),
+                  Container(
+                    child: GestureDetector(
+                      child: Image.asset(
+                        'assets/map.png'
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
