@@ -464,10 +464,67 @@ class _MyHomePageState extends State<MyHomePage> {
                     // On Tab link End
                   ),
                   Divider(color: Colors.white70,),
+                  ListTile(
+                    leading: Icon(
+                      FontAwesomeIcons.locationArrow,
+                      color: Colors.white70,
+                    ),
+                    title: Text(
+                      "Address:",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Matugama, Kalutara district, Sri Lanka.",
+                      style: TextStyle(
+                        letterSpacing: 2.0,
+                        color: Colors.white70,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white70,
+                    ),
+                    // On Tab link
+                    onTap: () async {
+                      final String googleMapsUrl = "https://goo.gl/maps/jGWa8QT7mdgiqgVd8";
+                      final String appleMapsUrl = "https://maps.apple.com/";
+
+                      if (await canLaunch(googleMapsUrl)) {
+                        await launch(googleMapsUrl);
+                      }
+                      if (await canLaunch(appleMapsUrl)) {
+                        await launch(appleMapsUrl, forceSafariVC: false);
+                      } else {
+                        throw "Couldn't launch URL";
+                      }
+                    },
+                    // On Tab link End
+                  ),
+                  Divider(
+                    color: Colors.transparent,
+                  ),
                   Container(
                     child: GestureDetector(
+                      onTap: () async {
+                        final String googleMapsUrl = "https://goo.gl/maps/jGWa8QT7mdgiqgVd8";
+                        final String appleMapsUrl = "https://maps.apple.com/";
+
+                        if (await canLaunch(googleMapsUrl)) {
+                          await launch(googleMapsUrl);
+                        }
+                        if (await canLaunch(appleMapsUrl)) {
+                          await launch(appleMapsUrl, forceSafariVC: false);
+                        } else {
+                          throw "Couldn't launch URL";
+                        }
+                      },
                       child: Image.asset(
-                        'assets/map.png'
+                        'assets/map.png',
+                        fit: BoxFit.fill,
+                        height: 280.0,
                       ),
                     ),
                   ),
